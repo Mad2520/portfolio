@@ -1,0 +1,56 @@
+titre: "Compétences"
+
+competences:
+  - domaine: "Développement"
+    items:
+      - nom: "HTML"
+        niveau: 5 
+      - nom: "CSS"
+        niveau: 5
+      - nom: "PHP"
+        niveau: 3
+      - nom: "Python"
+        niveau: 4
+      - nom: "JavaScript"
+        niveau: 4
+      - nom: "C"
+        niveau: 2
+  - domaine: "Réseaux"
+    items:
+      - nom: "Configuration réseau"
+        niveau: 5
+      - nom: "Sécurité des réseaux"
+        niveau: 5
+      - nom: "Diagnostic et dépannage"
+        niveau: 5
+  - domaine: "Mathématiques et Logique"
+    items:
+      - nom: "Logique et raisonnement"
+        niveau: 4
+      - nom: "Mathématiques avancées"
+        niveau: 4
+      - nom: "Algorithmique"
+        niveau: 4
+  - domaine: "Langues"
+    items:
+      - nom: "Anglais"
+        niveau: 3
+      - nom: "Français"
+        niveau: 5
+  - domaine: "Bureautique"
+    items:
+      - nom: "LibreOffice"
+        niveau: 5
+      - nom: "Microsoft Word"
+        niveau: 5
+      - nom: "Microsoft Excel"
+        niveau: 5
+      - nom: "Rédaction"
+        niveau: 5
+  - domaine: "Autres"
+    items:
+      - nom: "Création de contenu"
+        niveau: 5
+      - nom: "Gestion de projets"
+        niveau: 5
+

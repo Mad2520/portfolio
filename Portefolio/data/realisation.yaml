@@ -1,0 +1,22 @@
+titre: "realisations"
+realisations:
+  - titre: "Site Web"
+    description: "Site web en html/css réalisé dans le but d'un projet en développement sur les bandes originales."
+    illustration: "image/siteweb.png"
+    lien_github: "https://mad2520.github.io/Siteweb/"
+    gif_background: "../image/site.gif"
+    lien_procedure: "https://github.com/Mad2520/Siteweb.git"
+  
+  - titre: "Tableau Juridiques"
+    description: "J'ai réalisé un tableau sur les status juridiques en html/css dans le but d'un TP en html/css."
+    illustration: "image/tab.png"
+    lien_github: "https://mad2520.github.io/bloc1/"
+    gif_background: "../image/tab.gif"
+    lien_procedure: "https://github.com/Mad2520/bloc1.git"
+
+  - titre: "Site Blog"
+    description: "J'ai réalisé un site plus précisement un blog en html/css dans le but d'un TP en html/css."
+    illustration: "image/blog.png"
+    lien_github: "https://mad2520.github.io/bloc1/"
+    gif_background: "../image/blog.gif"
+    lien_procedure: "https://github.com/Mad2520/bloc1.git"

@@ -1,0 +1,9 @@
+formulaire:
+  nom: "Votre nom"
+  email: "votre email"
+  objet: "Objet du message"
+  message: "Message"
+  captcha: "Combien font"
+  bouton_envoyer: "Envoyer"
+  reponse_succes: "Votre message a été envoyé avec succès."
+  reponse_erreur: "Une erreur s'est produite, veuillez réessayer."

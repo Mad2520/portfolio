@@ -1,0 +1,46 @@
+
+title: "Portefolio"
+author: "audrain221"
+header:
+site_name: "VibraBO"
+navigation:
+  - name: "Accueil"
+    link: ""
+  - name: "Compétences"
+    link: ""
+  - name: "Réalisations"
+    link: ""
+  - name: "Formation"
+    link: ""
+  - name: "Contact"
+    link: ""
+main_section:
+  heading: "Portefolio"
+  footer:
+  follow_us: "Suivez-nous"
+social_icons:
+  - src: "img/icone1.png"
+    alt: "musique"
+  - src: "img/icone2.png"
+    alt: "musique"
+  - src: "img/icone3.png"
+    alt: "musique"
+social_links:
+  - src: "img/twitter.png"
+    alt: "twitter"
+  - src: "img/instagram.png"
+    alt: "instagram"
+  - src: "img/snap.png"
+    alt: "snapchat"
+  - src: "img/facebook.png"
+    alt: "facebook"
+  - src: "img/pinterest.png"
+    alt: "pinterest"
+    copyright: "Copyright Maddie © 2023"
+
+presentation:
+  prenom: "Maddie"
+  nom: "Audrain"
+  accroche: Construire des solutions innovantes, une ligne de code à la fois.
+  description: "Passionné d'informatique, j'ai 20 ans et je me spécialise en réseaux. Curieux et motivé, j’aime relever des défis techniques et approfondir mes connaissances dans ce domaine. Bienvenue sur mon portfolio !"
+  image: "image/acc.gif"

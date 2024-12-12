@@ -1,0 +1,11 @@
+navigation:
+  - name: "Accueil"
+    link: ""
+  - name: "Compétences"
+    link: ""
+  - name: "Réalisations"
+    link: ""
+  - name: "Formation"
+    link: ""
+  - name: "Contact"
+    link: ""
