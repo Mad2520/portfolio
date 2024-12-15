@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="css/accueil.css" />
@@ -7,77 +7,43 @@
     </head>
     <body>
         <nav>
-    
-        <?php 
-            require_once("yaml/yaml.php");
-            $data=yaml_parse_file("data/menu.yaml");
-            echo"<div class='header'>";
-                echo"<div class='image'>";
-                echo"<img src='image/logo.png'/>";
+            <?php 
+                // Inclure le fichier yaml pour récupérer les données du menu
+                $data = yaml_parse_file("data/menu.yaml");
+                echo "<div class='header'>";
+                    echo "<div class='image'>";
+                        echo "<img src='image/logo.png' alt='Logo' />";
+                    echo "</div>";
+                    echo "<div class='menunav'>";
+                        echo "<ul class='menu'>";
+                        foreach ($data["navigation"] as $nav) {
+                            if ($nav["name"] == "Compétences") {
+                                echo '<li><a href="#competences">Compétences</a></li>';
+                            } elseif ($nav["name"] == "Accueil") {
+                                echo '<li><a href="#accueil">Accueil</a></li>';
+                            } elseif ($nav["name"] == "Réalisations") {
+                                echo '<li><a href="#realisations">Réalisations</a></li>';
+                            } elseif ($nav["name"] == "Formation") {
+                                echo '<li><a href="#formation">Formation</a></li>';
+                            } elseif ($nav["name"] == "Contact") {
+                                echo '<li><a href="#formulaire">Contact</a></li>';
+                            }
+                        }
+                        echo "</ul>";
+                    echo "</div>";
                 echo "</div>";
-                echo"<div class='menunav'>";
-                echo "<ul class=\"menu\" >";
-                foreach($data["navigation"] AS $nav){
-                    if ($nav["name"] == "Compétences") {
-                        echo '<li><a href="#competences">Compétences</a></li>';
-                    }
-                    if ($nav["name"] == "Accueil") {
-                        // Lien d'ancrage vers la section accueil
-                        echo '<li><a href="#accueil">Accueil</a></li>';
-                    } 
-                    if ($nav["name"] == "Réalisations") {
-                        // Lien d'ancrage vers la section accueil
-                        echo '<li><a href="#accueil">Réalisations</a></li>';
-                    } 
-                    if ($nav["name"] == "Formation") {
-                        // Lien d'ancrage vers la section accueil
-                        echo '<li><a href="#accueil">Formation</a></li>';
-                    } 
-                    if ($nav["name"] == "Contact") {
-                        // Lien d'ancrage vers la section accueil
-                        echo '<li><a href="#formulaire">Contact</a></li>';
-                    } 
-                }
-                echo "</ul>";
-                echo "</div>";
-                echo "</div>";
-            
-                echo "<img class='menu-image' src='image/accueil.gif' alt='Image d'accueil'>";
+                echo "<img class='menu-image' src='image/accueil.gif' alt='Image d'accueil' />";
             ?>
-        ?>
-
-
         </nav>
-<?php 
-    require_once("yaml/yaml.php");
-    include("php/accueil.php");
 
-?>
-
-<?php 
-    require_once("yaml/yaml.php");
-    include("php/competences.php");
-
-?>
-
-<?php 
-    require_once("yaml/yaml.php");
-    include("php/realisation.php");
-
-?>
-
-<?php 
-    require_once("yaml/yaml.php");
-    include("php/formation.php");
-
-?>
-
-<?php 
-    require_once("yaml/yaml.php");
-    include("php/formulaire.php");
-
-?>
-   
-    
+        <?php 
+            // Inclure les fichiers PHP correspondant aux sections
+            include("php/accueil.php");      // Section Accueil
+            include("php/competences.php");  // Section Compétences
+            include("php/realisation.php");  // Section Réalisations
+            include("php/formation.php");    // Section Formation
+            include("php/formulaire.php");   // Section Contact
+        ?>
     </body>
 </html>
+
