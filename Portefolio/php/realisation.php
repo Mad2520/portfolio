@@ -1,9 +1,16 @@
 <?php
+
 $data = yaml_parse_file("data/realisation.yaml");
+
+// Début de la section des réalisations avec un ID
+echo '<section id="realisations" class="realisation-section-container">';
 echo '<h2 class="section-titre">Mes Réalisations</h2>';
+
 echo '<div class="realisation-container">';
 
+// Parcourir chaque réalisation et afficher le contenu
 foreach ($data['realisations'] as $realisation) {
+    // Sanitize input data
     $titre = htmlspecialchars($realisation['titre']);
     $description = htmlspecialchars($realisation['description']);
     $illustration = htmlspecialchars($realisation['illustration']);
@@ -11,7 +18,8 @@ foreach ($data['realisations'] as $realisation) {
     $gif_background = htmlspecialchars($realisation['gif_background']);
     $lien_procedure = htmlspecialchars($realisation['lien_procedure']);
 
-    echo '<section class="realisation-section">';
+    // Section individuelle pour chaque réalisation
+    echo '<section class="realisation-item">';
     echo '<article class="realisation-titre"><h3>' . $titre . '</h3></article>';
     echo '<article class="realisation-content">';
     echo '<div class="realisation-card" style="--gif-background: url(' . $gif_background . ');">';
@@ -26,4 +34,5 @@ foreach ($data['realisations'] as $realisation) {
 }
 
 echo '</div>';
+echo '</section>'; // Fin de la section des réalisations
 ?>

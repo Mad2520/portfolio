@@ -1,14 +1,24 @@
-* {
-    box-sizing: border-box; 
+@font-face {
+    font-family: 'galter';
+    src: url('font/Galter.otf') format('woff2');
 }
 
+* {
+    box-sizing: border-box;
+    font-family: "galter";
+    margin: 0;
+    padding: 0;
+}
 
-body{
-	background-color:black;
-	width:100%;
-	margin:0;
-    padding:0;
-    
+body {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
 }
 
 .titre {
@@ -21,99 +31,90 @@ body{
     object-fit: cover;
     font-family: "titre";
     max-width: 100%;
- }
-.menu{
-    display: flex;             
-    padding:0;                 
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
 }
 
 .menunav .menu li {
-    list-style-type: none ;
-}
-.menunav .menu a{
-    display:block;                
-    min-width: 120px;                             
-    padding: 1.2rem 25px;           
-    text-align: center;              
-    color: #fff;                  
-    text-decoration: none;  
-    font-size: 14px; 
-    text-transform: uppercase;     
-
+    list-style-type: none;
 }
 
-.menunav .menu a:hover{
-    border-bottom: 1px solid white;       
+.menunav .menu a {
+    display: block;
+    min-width: 120px;
+    padding: 1.2rem 25px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
+.menunav .menu a:hover {
+    border-bottom: 1px solid white;
 }
 
 .image img {
     border: none;
     cursor: pointer;
-	width: 8%;
+    width: 8%;
     display: block;
-    margin: 0%; 
-    padding: 0%;
+    margin: 0 auto;
+    padding: 0;
     margin-top: 1%;
-    margin-left: 1%;
-   
 }
 
-.menu-image{
+.menu-image {
     width: 100vw;
-    object-fit: cover; 
-    display: block; 
-    margin: 0; 
+    object-fit: cover;
+    display: block;
+    margin: 0;
     padding: 0;
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-attachment: fixed;
-    filter: brightness(0.7) contrast(1.2) saturate(1.2), blur(1px),grayscale(50%);
-    
-
+    filter: brightness(0.7) contrast(1.2) saturate(1.2), blur(1px), grayscale(50%);
 }
 
-
-.header{
-    display: grid;	
-    grid-template-columns: 5fr 1fr; 
-    padding: 0; 
-    color: white; 
-    margin:0;
+.header {
+    display: grid;
+    padding: 0;
+    color: white;
+    margin: 0;
     align-items: center;
-    position:fixed;
+    position: fixed;
     background-color: rgb(0, 0, 0);
     z-index: 15;
-
+    width: 100%;
 }
 
-
-
 .presentation-container {
-    position: relative; 
-    width: 40%;
-    margin: -5% auto 0 auto; 
-    padding: 7%; 
+    position: relative;
+    width: 50%;
+    margin: -5% auto 0 auto;
+    padding: 7%;
     padding-left: 10%;
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
-    text-align: center; 
-    color: white; 
-    z-index: 10; 
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+    z-index: 10;
 }
 
 .presentation-text {
     position: relative;
-    display: inline-block; 
-    right:35%;
-    margin-right: 40%;
+    display: inline-block;
+    margin: 0 auto;
 }
 
-
 .presentation-text h2 {
-    margin: 10px 0; 
-    font-size: 2em; 
+    margin: 10px 0;
+    font-size: 2em;
     font-weight: bold;
 }
 
@@ -121,31 +122,26 @@ body{
     margin: 2% 0 1%;
     font-size: 1.5em;
     font-style: italic;
-    color: #555554; 
+    color: #555554;
 }
-
 
 .presentation-text p {
     margin: 0;
     font-size: 1.2em;
     line-height: 1.6;
-
 }
 
-
-  
 .frise_chronologique {
-    
-    display:grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap:20%;
+    gap: 20%;
     justify-items: center;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/fond2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/fond2.jpg");
     background-size: contain;
     background-repeat: repeat;
     background-attachment: fixed;
-    padding:5%; 
-    padding-bottom:25%;
+    padding: 5%;
+    padding-bottom: 25%;
     margin-top: 2%;
     margin-bottom: 10%;
 }
@@ -162,27 +158,21 @@ body{
     overflow: hidden;
     transition: transform 0.3s ease;
     align-items: center;
-    
 }
-
 
 .frise.développement {
-    background-image: url("../image/dev.png"); 
+    background-image: url("../image/dev.png");
     display: flex;
 }
-
-
-
 
 .frise.réseaux {
     display: flex;
-    background-image: url("../image/reseau.png"); 
-    
+    background-image: url("../image/reseau.png");
 }
 
 .frise.mathématiques-et-logique {
     display: flex;
-    background-image: url("../image/maths.png"); 
+    background-image: url("../image/maths.png");
 }
 
 .frise.langues {
@@ -213,40 +203,34 @@ body{
     background: rgba(0, 0, 0, 0.7);
     color: white;
     border-radius: 5px;
-    opacity: 0; 
+    opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease; 
-    padding:20%;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    padding: 20%;
 }
 
 .frise .item {
     display: flex;
-    justify-content: flex-start; 
-    align-items: center; 
-    width: 80%; 
-    max-width: 600px; 
-    gap:10%;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    gap: 10%;
 }
-
 
 .domaine-titre {
     text-transform: uppercase;
     color: white;
-    font-family: "paragraphe";
     text-align: center;
     align-items: end;
-    background-color: rgb(19, 19, 19,0.1);
-    margin-left:20%;
-    margin-right: 20%;
-    padding:10%;
-    width:100%;
-    display:block;
-    text-decoration: none; 
+    background-color: rgb(19, 19, 19, 0.1);
+    padding: 20%;
+    width: 100%;
+    display: block;
+    text-decoration: none;
     margin-bottom: 5%;
+    font-size: 25px;
 }
-
-
-
 
 .texte h1 {
     text-transform: uppercase;
@@ -254,34 +238,28 @@ body{
     font-size: 12px;
 }
 
-
-
 .frise:hover .texte {
     opacity: 1;
     visibility: visible;
-
 }
 
-.frise:hover .domaine-titre{
+.frise:hover .domaine-titre {
     visibility: hidden;
 }
 
-
-
 .etoile {
-    margin-right: 5px; 
+    margin-right: 5px;
 }
 
 .etoile.pleine {
-    color: #FFD700; 
+    color: #FFD700;
 }
 
 .etoile.vide {
-    color: #B0B0B0; 
+    color: #B0B0B0;
 }
 
 .comp-titre {
-    font-family: "sous-titre";
     border-top: solid 1px rgba(129, 122, 122, 0.5);
     border-bottom: solid 1px rgba(129, 122, 122, 0.5);
     color: rgba(255, 253, 253, 0.8);
@@ -295,7 +273,7 @@ body{
 
 .realisation-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 2% 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
     background-attachment: fixed;
@@ -304,7 +282,7 @@ body{
     gap: 4%;
 }
 
-.realisation-container .realisation-section{
+.realisation-container .realisation-section {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: flex-start;
@@ -339,55 +317,53 @@ body{
     transform: scale(1.1);
     box-shadow: 0 10px 20px rgb(255, 255, 255);
     visibility: hidden;
-  }
-  
-  
-  .realisation-container .realisation-card p {
+}
+
+.realisation-container .realisation-card p {
     color: white;
     text-align: center;
-    padding:5%;
+    padding: 5%;
     background-color: #00000096;
     margin: 10%;
-    margin-top:20%;
+    margin-top: 20%;
 }
+
 .realisation-card:hover {
-    background-image: var(--gif-background); 
+    background-image: var(--gif-background);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top;
-    box-shadow: 0 2px 15px 0  rgba(255, 255, 255, 0.315);
-  }
-  
+    box-shadow: 0 2px 15px 0 rgba(255, 255, 255, 0.315);
+}
+
 .btn-procedure {
     display: inline-block;
     text-align: center;
-    background-color: #5b565152; 
-    color:white;
+    background-color: #5b565152;
+    color: white;
     text-decoration: none;
     padding: 10px 20px;
     margin-top: 10px;
     margin-left: 30%;
     margin-right: 30%;
     border-radius: 5px;
-    font-family: "Arial", sans-serif;
     font-size: 14px;
     transition: 0.3s ease;
     text-transform: uppercase;
-  }
-  
+}
+
 .btn-procedure:hover {
     background-color: rgba(156, 156, 156, 0.68);
-    transform: scale(1.1); 
+    transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     color: #000000;
-  }
-
+}
 
 .formation-container {
     width: 90%;
     margin: 2% auto;
     padding: 5%;
-    background-color: #1f1f1f; 
+    background-color: #1f1f1f;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
@@ -400,7 +376,7 @@ body{
 .cv-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #e91e63; 
+    background-color: #e91e63;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -436,7 +412,7 @@ body{
 }
 
 .formation-table tr:hover {
-    background-color: #2c2c2c; 
+    background-color: #2c2c2c;
     cursor: pointer;
 }
 
@@ -447,11 +423,10 @@ body{
 }
 
 .formation-table tr:hover td {
-    color: white; 
+    color: white;
 }
 
 h2 {
-    font-family: "sous-titre";
     border-top: solid 1px rgba(129, 122, 122, 0.5);
     border-bottom: solid 1px rgba(129, 122, 122, 0.5);
     color: rgba(255, 253, 253, 0.8);
@@ -463,21 +438,20 @@ h2 {
     margin-top: 3%;
 }
 
-
 .form-container {
-    background-color: #1e1e1e; /* Fond plus sombre */
+    background-color: #1e1e1e;
     border-radius: 8px;
     padding: 20px;
     max-width: 600px;
     margin: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Ombre subtile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 form {
     background-color: #1e1e1e;
     border-radius: 8px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    padding: 20px;
+    padding: 60px;
     width: 100%;
     box-sizing: border-box;
     text-align: center;
@@ -488,7 +462,7 @@ form h2 {
     color: #ab9d7b;
     font-size: 1.5em;
     text-transform: uppercase;
-    margin:auto;
+    margin: auto;
 }
 
 form p {
@@ -577,7 +551,226 @@ label {
     margin-top: 8px;
 }
 
-#formulaire{
-    margin-top:15%;
+#formulaire {
+    margin-top: 3%;
     margin-bottom: 8%;
+}
+
+/* Base CSS pour le footer */
+footer.footer {
+    background-color: #00000094;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Social icons dans le footer */
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.footer .social-icons a img {
+    width: 32px;
+    height: 32px;
+    filter: brightness(0) invert(1); /* Icônes blanches sur fond sombre */
+}
+
+.footer .social-icons a:hover {
+    transform: scale(1.2);
+    color: #0073e6;
+}
+
+/* P pour le texte de copyright */
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Media Queries pour le responsive */
+@media (max-width: 1200px) {
+    .realisation-container {
+        grid-template-columns: 1fr;
+        margin-bottom: 40%;
+    }
+
+    .frise_chronologique {
+        padding-bottom: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .comp-titre, h2 {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .titre {
+        font-size: 30px; /* Taille réduite pour le mobile */
+        padding: 15%; /* Réduction du padding pour éviter l'espace inutile */
+    }
+
+    .menu {
+        flex-direction: column; /* Plus clair pour les mobiles */
+    }
+
+    .menunav .menu a {
+        font-size: 14px; /* Taille réduite des liens */
+        padding: 0.5rem 15px; /* Padding ajusté */
+    }
+
+    .image img {
+        width: 20%;
+    }
+
+    .header {
+        grid-template-columns: auto;
+        justify-content: center;
+    }
+
+    .frise_chronologique {
+        grid-template-columns: 1fr;
+        gap: 2%;
+        margin-bottom: 10%;
+        padding-bottom: 80%;
+    }
+
+    .presentation-container {
+        width: 100%;
+    }
+
+    .menu-image-section {
+        padding-top: 60%;
+    }
+
+    #réalisations {
+        width: auto;
+    }
+
+    .realisation-container {
+        grid-template-columns: 1fr; /* Une seule colonne pour les réalisations */
+    }
+
+    .realisation-card img {
+        width: 100%; /* Largeur complète pour éviter chevauchement */
+    }
+
+    .formation-container {
+        width: 90%; /* Ajustement de la largeur pour le mobile */
+        margin: 2% auto;
+    }
+
+    .cv-section h2 {
+        margin-right: 10%; /* Ajustement du texte centré */
+        margin-left: 10%;
+    }
+
+    .form-container {
+        width: 90%; /* Largeur réduite pour le mobile */
+    }
+
+    .contact-container {
+        padding: 5%;
+        width: 90%;
+        margin: 2% auto;
+    }
+
+    .formation-table {
+        width: 100%;
+        display: block;
+    }
+
+    .formation-table thead {
+        display: none;
+    }
+
+    .formation-table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .formation-table th, .formation-table td {
+        padding: 10px;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .formation-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-container {
+        margin-bottom: 50%;
+    }
+
+    footer.footer {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titre {
+        font-size: 20px; /* Taille plus réduite */
+        padding: 10%; /* Padding plus réduit */
+    }
+
+    .menunav .menu a {
+        font-size: 11px; /* Taille des liens encore réduite pour petits écrans */
+    }
+
+    .realisation-card img {
+        width: 100%; /* Largeur complète pour mobiles très petits */
+    }
+
+    .form-container {
+        width: 95%; /* Ajustement pour très petits écrans */
+    }
+
+    .formation-table {
+        width: 100%;
+        display: block;
+    }
+
+    .formation-table thead {
+        display: none;
+    }
+
+    .formation-table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .formation-table th, .formation-table td {
+        padding: 10px;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    .formation-table td:before {
+        content: attr(data-label);
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+    }
 }

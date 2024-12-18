@@ -1,0 +1,10 @@
+socials:
+  - platform: "GitHub"
+    url: "https://github.com/Mad2520"
+    icon: "../image/git.png"
+  - platform: "LinkedIn"
+    url: "https://www.linkedin.com/in/maddie-audrain-990a2629b/"
+    icon: "../image/linkedin.png"
+  - platform: "Instagram"
+    url: "https://instagram.com/"
+    icon: "../image/instagram.png"

@@ -1,49 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/accueil.css" />
-        <title>Portefolio</title>
-    </head>
-    <body>
-        <nav>
-            <?php 
-                // Inclure le fichier yaml pour récupérer les données du menu
-                $data = yaml_parse_file("data/menu.yaml");
-                echo "<div class='header'>";
-                    echo "<div class='image'>";
-                        echo "<img src='image/logo.png' alt='Logo' />";
-                    echo "</div>";
-                    echo "<div class='menunav'>";
-                        echo "<ul class='menu'>";
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/accueil.css">
+</head>
+<body>
+
+    <!-- Header Section avec logo et navigation -->
+    <header>
+        <div class="header">
+            <div class="image">
+                <img src="image/logo.png" alt="Logo Portfolio">
+            </div>
+            <nav class="menunav">
+                <ul class="menu">
+                    <?php 
+                        require_once("yaml/yaml.php");
+                        $data = yaml_parse_file("data/menu.yaml");
+                        
+                        // Affichage des liens de navigation
                         foreach ($data["navigation"] as $nav) {
-                            if ($nav["name"] == "Compétences") {
-                                echo '<li><a href="#competences">Compétences</a></li>';
-                            } elseif ($nav["name"] == "Accueil") {
-                                echo '<li><a href="#accueil">Accueil</a></li>';
-                            } elseif ($nav["name"] == "Réalisations") {
-                                echo '<li><a href="#realisations">Réalisations</a></li>';
-                            } elseif ($nav["name"] == "Formation") {
-                                echo '<li><a href="#formation">Formation</a></li>';
-                            } elseif ($nav["name"] == "Contact") {
-                                echo '<li><a href="#formulaire">Contact</a></li>';
+                            switch ($nav["name"]) {
+                                case "Accueil":
+                                    echo '<li><a href="#accueil">Accueil</a></li>';
+                                    break;
+                                case "Compétences":
+                                    echo '<li><a href="#competences">Compétences</a></li>';
+                                    break;
+                                case "Réalisations":
+                                    echo '<li><a href="#realisations">Réalisations</a></li>';
+                                    break;
+                                case "Formation":
+                                    echo '<li><a href="#formations">Formation</a></li>';
+                                    break;
+                                case "Contact":
+                                    echo '<li><a href="#formulaire">Contact</a></li>';
+                                    break;
                             }
                         }
-                        echo "</ul>";
-                    echo "</div>";
-                echo "</div>";
-                echo "<img class='menu-image' src='image/accueil.gif' alt='Image d'accueil' />";
-            ?>
-        </nav>
+                    ?>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <?php 
-            // Inclure les fichiers PHP correspondant aux sections
-            include("php/accueil.php");      // Section Accueil
-            include("php/competences.php");  // Section Compétences
-            include("php/realisation.php");  // Section Réalisations
-            include("php/formation.php");    // Section Formation
-            include("php/formulaire.php");   // Section Contact
-        ?>
-    </body>
+    <!-- Image d'accueil -->
+    <section class="menu-image-section">
+        <img class="menu-image" src="image/accueil.gif" alt="Image d'accueil">
+    </section>
+
+    <!-- Section Accueil -->
+    <main>
+        <?php include("php/accueil.php"); ?>
+    </main>
+
+    <!-- Section Compétences -->
+    <section id="competences">
+        <?php include("php/competences.php"); ?>
+    </section>
+
+    <!-- Section Réalisations -->
+    <section id="realisations">
+        <?php include("php/realisation.php"); ?>
+    </section>
+
+    <!-- Section Formation -->
+    <section id="formations">
+        <?php include("php/formation.php"); ?>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="formulaire">
+        <?php include("php/formulaire.php"); ?>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <?php include("php/footer.php"); ?>
+    </footer>
+   
+</body>
 </html>
-
