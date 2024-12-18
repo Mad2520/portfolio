@@ -116,6 +116,7 @@ body {
     margin: 10px 0;
     font-size: 2em;
     font-weight: bold;
+    margin-right: 60%;
 }
 
 .presentation-text h3 {
@@ -123,12 +124,13 @@ body {
     font-size: 1.5em;
     font-style: italic;
     color: #555554;
+    margin-right: 60%;
 }
 
 .presentation-text p {
     margin: 0;
     font-size: 1.2em;
-    line-height: 1.6;
+    margin-right: 60%;
 }
 
 .frise_chronologique {
@@ -609,9 +611,13 @@ footer.footer {
     .frise_chronologique {
         padding-bottom: 60%;
     }
+
+    .presentation-text h2, .presentation-text h3, .presentation-text p{
+        font-size: 0.9em;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
 
 
     .comp-titre, h2 {
@@ -635,6 +641,18 @@ footer.footer {
 
     .image img {
         width: 20%;
+    }
+
+    .presentation-text h2{
+        font-size: 0.9em;
+    }
+
+    .presentation-text h3{
+        font-size: 0.7em;
+    }
+
+    .presentation-text p{
+        font-size: 0.5em;
     }
 
     .header {

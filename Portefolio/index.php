@@ -17,7 +17,6 @@
             <nav class="menunav">
                 <ul class="menu">
                     <?php 
-                        require_once("yaml/yaml.php");
                         $data = yaml_parse_file("data/menu.yaml");
                         
                         // Affichage des liens de navigation
